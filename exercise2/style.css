@@ -1,0 +1,10 @@
+*{margin: 0; padding: 0;}
+body{background-color:rgb(255,255,240);color:rgb(54,69,79);font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif}
+h1{font-size: 50px;font-weight:bold;margin: 0 10 100px 0;}
+h2{font-size: 30px;font-weight:normal;margin:0 10 50px 0;}
+h3{font-size: 30px;font-weight:normal;margin:0 10 50px 0;}
+h4{font-size: 20px;font-weight:normal;margin:0 10 50px 0;}
+img{width: 100%;/*using percentage instead of pixels to make the image responsive*/height:auto;/*maintain the aspect ratio of the image*/box-shadow:rgba(0,0,0,0,4) 10px 10px; /*adding a subtle shadow to image to make them stand out a little bit*/;border-radius:0;max-width: 500px; /* Changes size smaller safely*/}
+p{max-width: 70%;/*makes the text container not exceed 70% of the page width*/;margin: 0 10 50px 0; line-height: 1.5; /*increasing the line height to make the text more readable*/}
+h4{max-width: 70%;/*makes the text container not exceed 70% of the page width*/;margin: 0 10 50px 0; line-height: 1.5; /*increasing the line height to make the text more readable*/}
+body{margin-left: 1%; /* moves content right by 1% of the page width*/}
