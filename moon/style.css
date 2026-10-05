@@ -1,0 +1,234 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body { background-color: black; color:white;}
+h1 {
+    font-size: 48px;
+}
+html {scroll-behavior: smooth;}
+.ibm-plex-sans-700 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+.ibm-plex-sans-400 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+.ibm-plex-serif-regular {
+  font-family: "IBM Plex Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.ibm-plex-serif-bold {
+  font-family: "IBM Plex Serif", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+header {
+    text-align: center;
+    padding: 40px;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+}
+li {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+}
+li a {
+    color: yellow;
+    text-transform: uppercase;
+    text-transform: none;
+    padding:10px;
+    background-color: rgb(80,79,79);
+}
+li a:visited {
+    color: yellow;
+}
+li a:hover {
+    color: green;
+    background-color: red;
+}
+#opener {
+    background-image: url(moon-images/stars.jpg); width: 100%; height: 100vh; background-size: cover;
+/* if the child has position absolute, then the parents needs position relative */
+    position: relative;
+    overflow: hidden;
+}
+.quote {
+    width: 50%;
+    position: relative;
+    top: 300px;
+    left: 100px;
+    z-index: 10;
+}
+h2 {
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+.redmoon {
+    background-image: url(moon-images/moon-red.png);
+    width: 600px;
+    height: 600px;
+    background-size: contain;
+    position: absolute;
+/* the higher the z index, the more in front that element is */
+    bottom: -100px;
+    right: -100px;
+    z-index: 9;
+}
+.bluemoon {
+    background-image: url(moon-images/moon-blue.png);
+    width: 800px;
+    height: 800px;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    right: 0;
+    top: -100px;
+    right: -100px;
+    z-index: 8;
+}
+.bwmoon {
+    background-image: url(moon-images/moon-bw.png);
+    width: 400px;
+    height: 400px;
+    background-size: contain;
+    position: absolute;
+    bottom: -50px;
+    left: -50px;
+    z-index: 7;
+}
+#facts {
+    background-image: url(moon-images/galaxy.jpg);
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: bottom;
+}
+.flex-area {
+    display: flex;
+    flex-direction: row;
+/* to center flex items horizontally */ 
+    justify-content: center;
+/* to center flex items vertically */    
+    align-items: center;
+
+}
+h4 {
+    font-size: 28px;
+    margin: 0 0 20px 0;
+}
+h5 {
+    font-size: 20px;
+}
+.flex-column {
+    width: 30%;
+    margin: 0 5%;
+}
+iframe {
+    margin: 150px 50px;
+}
+#phases {
+    padding: 150px 0;
+}
+.parent {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(4, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+width: 60%;
+margin: 0 auto 0 auto;
+}
+
+.div1 { 
+    grid-area: 1 / 1 / 2 / 4;
+    background-image: url(moon-images/phases-all.jpg);
+    background-size: contain;
+    background-position: center;
+}
+.div2 { 
+    grid-area: 2 / 1 / 3 / 2; 
+    background-image: url(moon-images/phase1.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+}
+.div3 { 
+     background-image: url(moon-images/phase2.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    grid-area: 2 / 2 / 3 / 3; 
+}
+.div4 { 
+     background-image: url(moon-images/phase3.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    grid-area: 2 / 3 / 3 / 4; 
+}
+.div5 { 
+     background-image: url(moon-images/phase4.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    grid-area: 3 / 1 / 4 / 2; 
+}
+.div6 { 
+     background-image: url(moon-images/phase5.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    grid-area: 3 / 2 / 4 / 3; 
+}
+.div7 { 
+     background-image: url(moon-images/phase6.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    grid-area: 3 / 3 / 4 / 4; 
+}
+.div8 { 
+     background-image: url(moon-images/phase7.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    grid-area: 4 / 1 / 5 / 2; 
+}
+.div9 {
+     background-image: url(moon-images/phase8.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; 
+    grid-area: 4 / 2 / 5 / 3; 
+}
+.div10 {
+    grid-area: 4 / 2/ 5 / 3 ; 
+}
+/* asterisk represents all the divs inside of parents */
+.parent * {
+/* use display flex, justify content, and align items to center both vertically and horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* target the p's inside of #phases */
+#phases p {
+    text-transform: uppercase;
+    color: yellow;
+    text-shadow: 2px 2px 4px black;
+}
