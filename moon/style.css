@@ -232,3 +232,96 @@ margin: 0 auto 0 auto;
     color: yellow;
     text-shadow: 2px 2px 4px black;
 }
+
+/* poem style section */
+#poem {
+    background-image: url(moon-images/stars.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.text {
+    text-align: center;
+    position: relative;
+    z-index: 5;
+}
+.text h2 {
+    font-size: 42px;
+}
+.text h3 {
+    font-size: 18px;
+    margin: 0 0 40px 0;
+}
+.text p {
+    font-size: 28px;
+    margin: 20px 0;
+}
+.themoon {
+    color: red;
+    opacity: 0.1;
+    transition: all 3s;
+}
+.themoon:hover {
+    color: blue;
+    cursor: pointer;
+    opacity: 1;
+}
+.laugh {
+    color: pink;
+    background-color: green;
+    display: inline-block;
+    padding: 0 10px;
+    margin: 0 5px;
+    transition: all 2s;
+}
+.laugh:hover {
+    transform: rotate(180deg);
+    cursor: crosshair;
+    color: brown;
+    background-color: blueviolet;
+}
+.call {
+    background-color: red;
+    display: inline-block;
+    padding: 0 10px;
+    margin: 0 5px;
+    transition: all 3s;
+}
+.call:hover {
+    transform: scale(3,3);
+    translate: (50px,0);
+    opacity: 0;
+    cursor: pointer;
+}
+#poem .redmoon {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: movemoon 5s 0s infinite alternate;
+    /* shorthand: animation name, duration, delay, iteration count, direction */
+    z-index: 4;
+}
+@keyframes movemoon {
+    0% {top: 0; left: 0;}
+    50% {top: 500px; left: 0;}
+    100% {top: 500px; left: 500px;}
+}
+#poem .bluemoon {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: rotatemoon 3s 0s infinite alternate;
+    z-index: 3;
+}
+@keyframes rotatemoon {
+    0% {transform: rotate(0deg) scale(1,1); opacity: 1;}
+    100% {transform: rotate(360deg) scale(4,4); opacity: 0;}
+}
