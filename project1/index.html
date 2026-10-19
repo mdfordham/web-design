@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <Title>My Apartment</Title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Ink:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    </head>
+
+<body>
+    <section class="roommatespicture" id="top">
+        <header>
+    <h1 class="shadows-into-light-regular">My Apartment</h1>
+    <nav class="shadows-into-light-regular">
+        <ul>
+            <h1><li><a href="#roommates">Roommates</a></li></h1>
+            <h1><li><a href="#ambience">Ambience</a></li></h1>
+            <h1><li><a href="#specialmentions">Special Mentions</a></li></h1>
+        </ul>
+    </nav>
+    </header>
+    </section>
+
+<!-- meet my roommates-->
+    <section id="roommates" class="roommates-text">
+        <h2 class="bead-regular-400 stair-title">
+        <span class="word w1">Meet</span>
+        <span class="word w2">my</span>
+        <span class="word w3">Roommates</span>
+        </h2>
+    <div class="roommate-gallery">
+        <img class="pc photo-left" src="everyone1.jpeg">
+    <div class="roommate-para shadows-into-light-regular">
+        <p>We have lived together for a couple years,</p> 
+            <p>and met through rowing.</p>
+            <p>From right to left is Bella, Eva, Grace,</p> 
+            <p>Me, and Laura.</p> 
+            <p>Although we are all different majors,</p> 
+            <p>we often study and take classes together.</p> 
+            <p>Most often, we watch silly movies,</p> 
+            <p>go out for frozen yogurt, and explore the city.</p>
+        </div></div>
+      <div class="roommate-gallery">
+        <img class="pc photo-right"
+        src="everyone2.jpeg">
+    </div>
+    </section>
+
+<!-- Ambience section -->
+<section id="ambience">
+    <h2 class="shadows-into-light-regular">Ambience</h2>
+</section>
+<section id="videos" class="video-section">
+    <div class="video-list">
+        <div class="video-item">
+        <video class="hover-vid" src="ambience1.mp4" poster="ambience3poster.jpeg" muted loop playsinline preload="metadata" tabindex="0" aria-label="Video 1: train ambience"></video>
+        </div>
+        <div class="video-item">
+        <video class="hover-vid" src="ambience3.mp4" poster="ambience2poster.jpeg" muted loop playsinline preload="metadata" tabindex="0" aria-label="Video 1: train ambience"></video>
+        </div>
+        <div class="video-item">
+        <video class="hover-vid" src="ambience2.mp4" poster="ambience1poster.jpeg" muted loop playsinline preload="metadata" tabindex="0" aria-label="Video 1: train ambience"></video>
+        </div>
+    </div>
+</section>
+
+<!-- Special Mentions section -->
+<section id="specialmentions">
+    <h2 class="bead-regular-400">Special Mentions</h2>
+
+</section>
+
+
+
+
+
+
+
+
+<script>
+    const roommatesLink = document.querySelector('a[href="#roommates"]');
+    const roommatesSection = document.getElementById('roommates');
+
+if (roommatesLink && roommatesSection) {
+    roommatesLink.addEventListener('click',function (e) {e.preventDefault();
+
+    roommatesSection.classList.remove('animate-words');
+    void roommatesSection.offsetWidth;
+    roommatesSection.classList.add('animate-words');
+
+    window.location.hash = 'roommates';
+    document.getElementById('roommates').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+    });
+}
+</script>
+<script>
+    const videos = document.querySelectorAll('.hover-vid');
+
+    videos.forEach((video) => {
+        video.muted= true;
+        video.preload = 'auto';
+
+        video.addEventListener('mouseenter' , () => { 
+            video.play().catch(() => {});
+        });
+        video.addEventListener('mouseleave' , () => {
+            video.pause();
+            video.currentTime = 0;
+        });
+
+        video.addEventListener('focus' , () => {
+            video.play().catch(() => {});
+        });
+        video.addEventListener('blur', () => {video.pause();
+            video.currentTime = 0
+        });
+        });
+</script>
+
+
+</body>
+</html>
