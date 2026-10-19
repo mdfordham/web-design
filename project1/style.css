@@ -224,3 +224,19 @@ font-size: 3.5rem;
     margin: 0 auto;
     font-family: "Bitcount Ink", system-ui;
 }
+.special-mentions-image {
+    height:600px;
+    width: 400px;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+    justify-content: flex-end;
+}
+.roommate-para2 {
+    position: absolute;
+    margin-bottom: 700px;
+    margin-right: 600px;
+    width: 150px;
+    margin-left: 150px;
+}
