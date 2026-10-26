@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 15vw;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 3px 3px 3px black; line-height: 1;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+    background-color: pink;
+}
+#headline {
+    width: 80%;
+    margin: 50px auto;
+    position: relative;
+}
+.cupcake1 {
+    width: 100px;
+    height: 100px;
+    background-image: url("cupcake-images/cupcake1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+/* child is absolute; parent needs to have position relative */
+top: 100px;
+left: 0px;
+animation: rotate 3s 0s infinite alternate;
+}
+
+.cupcake2 {
+    width:150px;
+    height: 150px;
+    background-image: url(cupcake-images/cupcake2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    position: absolute;
+    top:150px;
+    right: 0px;
+    animation: rotate 8s 2s infinite alternate;
+}
+@keyframes rotate {
+    0% {rotate: 0deg;}
+    100% {rotate: 360deg;}
+}
+#content {
+    width: 80%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: row;  
+}
+.column {
+    width: 50%;
+}
+.h2 {
+    font-size: 28px;
+    margin-right: 50px;
+}
+p {
+    font-size: 20px;
+    line-height: 1.3;
+}
+#bottom {
+    width: 80%;
+    margin: 50px auto;
+}
+
+#bottom img {
+    width: 100%;
+    height: auto;
+}
+@media screen and (max-width: 100px) {
+    body {
+        border: 2px solid yellow;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #content {
+        flex-direction: column;
+    }
+    .column {
+        width: 100%;
+    }
+    h2 {
+        margin-bottom: 50px;
+    }
+    .cupcake2 {
+        top: 50px;
+        width: 75px;
+        height: 75px;
+    }
+    body {
+        background-color: aliceblue;
+    }
+}
