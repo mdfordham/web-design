@@ -32,7 +32,7 @@
 <div class="event-flip-card">
     <div class="event-flip-inner">
         <div class="event-flip-face event-flip-front">
-            <img src="images/swim.jpg" alt="Swimming at Widow's Bay">
+            <img src="swim.jpg" alt="Swimming at Widow's Bay">
         </div>
         <div class="event-flip-face event-flip-back">
             <p>Mayor Loftis' Inaugural Swim</p>
@@ -47,7 +47,7 @@
     <div class="event-flip-card">
     <div class="event-flip-inner">
         <div class="event-flip-face event-flip-front">
-            <img src="images/Sunset Cocktails.jpg" alt="Sunset Cocktails">
+            <img src="Sunset Cocktails.jpg" alt="Sunset Cocktails">
         </div>
         <div class="event-flip-face event-flip-back">
             <p>Sunset Cocktails</p>
@@ -62,7 +62,7 @@
     <div class="event-flip-card">
     <div class="event-flip-inner">
         <div class="event-flip-face event-flip-front">
-            <img src="images/bonfire.jpg" alt="Beach Bonfire">
+            <img src="bonfire.jpg" alt="Beach Bonfire">
         </div>
         <div class="event-flip-face event-flip-back">
             <p>Beach Bonfire</p>
@@ -95,21 +95,6 @@ const alertCloseButton = travelAlert.querySelector(".alert-close");
 alertCloseButton.addEventListener("click", () => {
     travelAlert.hidden = true;
 });
-const flipObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-     entry.target.classList.toggle("is-visible", entry.isIntersecting);
-    });
-if (window.matchMedia("(hover: none)").matches) {
- const flipObserver = new IntersectionObserver((entries) => {
- entries.forEach((entry) => {
- entry.target.classList.toggle("is-visible", entry.isIntersecting);
-   });
-    }, { threshold: 0.15 });
-
-    document.querySelectorAll(".event-flip-card").forEach((card) => {
-    flipObserver.observe(card);
-    });
-}
 </script>
 
 </body>

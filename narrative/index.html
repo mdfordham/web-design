@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <title>Widow's Bay</title>
     <link rel="stylesheet" href="style.css">
@@ -8,61 +9,66 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
-   <section class="hero">
-    <h1>Widow's Bay</h1>
+    <section class="hero">
+        <h1>Widow's Bay</h1>
 
+     <nav class="hero-menu" aria-label="Main navigation">
     <input class="menu-toggle" type="checkbox" id="menu-toggle" aria-label="Toggle menu">
-<label class="menu-button" for="menu-toggle">
-    <span></span><span></span><span></span>
+
+    <label class="menu-button" for="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
 </label>
 
-<div class="menu-overlay">
-    <label class="menu-backdrop" for="menu-toggle" aria-label="Close menu"></label>
-    <a href="page2.html">Upcoming Events</a>
-    <a href="page3.html">Town History</a>
-    <a href="page4.html">Plan Your Visit</a>
-</div>
-    </nav>
-</section>
+    <div class="menu-overlay">
+                <label class="menu-backdrop" for="menu-toggle" aria-label="Close menu"></label>
+                <a href="page2.html">Upcoming Events</a>
+                <a href="page3.html">Town History</a>
+                <a href="page4.html">Plan Your Visit</a>
+            </div>
+        </nav>
+    </section>
 
-<section>
-<img src="images/scenic2.jpg"></section>
+    <section>
+        <img src="scenic2.jpg" alt="Widow's Bay scenic view">
+    </section>
 
-<section id="section-3">
-    <img src="images/scenic4.jpg">
-</section>
+    <section id="section-3">
+        <img src="scenic4.jpg" alt="Widow's Bay scenic view">
+    </section>
 
-<section>
-    <img src="images/scenic6.jpg">
-</section>
+    <section>
+        <img src="scenic6.jpg" alt="Widow's Bay scenic view">
+    </section>
 
-<section>
-    <img src="images/scenic5.jpg">
-</section>
+    <section>
+        <img src="scenic5.jpg" alt="Widow's Bay scenic view">
+    </section>
 
+    <div class="patricia-popup" id="patricia-popup" role="dialog" aria-labelledby="patricia-message" hidden>
+        <button class="popup-close" type="button" aria-label="Close popup">&times;</button>
+        <p id="patricia-message">Thank you to Patricia, our assistant to the mayor, for making our website!</p>
+        <img class="patricia-headshot" src="Patricia headshot.jpg" alt="Patricia">
+    </div>
 
-<div class="patricia-popup" id="patricia-popup" role="dialog" aria-labelledby="patricia-message" hidden>
-    <button class="popup-close" type="button" aria-label="Close popup">&times;</button>
-    <p id="patricia-message">Thank you to Patricia, our assistant to the mayor, for making our website!</p>
-    <img class="patricia-headshot" src="images/Patricia headshot.jpg" alt="Patricia">
-</div>
+    <script>
+        const patriciaPopup = document.getElementById("patricia-popup");
 
-<script>
-    const patriciaPopup = document.getElementById("patricia-popup");
+        patriciaPopup.querySelector(".popup-close").addEventListener("click", () => {
+            patriciaPopup.hidden = true;
+        });
 
-    patriciaPopup.querySelector(".popup-close").addEventListener("click", () => {
-        patriciaPopup.hidden = true;
-    });
-    const section3 = document.getElementById("section-3");
-const observer = new IntersectionObserver(([entry]) => {
-    if (entry.isIntersecting) {
-        patriciaPopup.hidden = false;
-        observer.disconnect();
-    }
-}, { threshold: 0.25 });
+        const section3 = document.getElementById("section-3");
+        const observer = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                patriciaPopup.hidden = false;
+                observer.disconnect();
+            }
+        }, { threshold: 0.25 });
 
-observer.observe(section3);
-</script>
+        observer.observe(section3);
+    </script>
 
 </body>
 </html>
