@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Town History | Widow's Bay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="events-page">
+        <nav class="hero-menu" aria-label="Main navigation">
+            <input class="menu-toggle" type="checkbox" id="page3-menu-toggle" aria-label="Toggle menu">
+            <label class="menu-button" for="page3-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <div class="menu-overlay">
+                <label class="menu-backdrop" for="page3-menu-toggle" aria-label="Close menu"></label>
+                <div class="menu-panel">
+                    <a href="index.html">Home Page</a>
+                    <a href="page2.html">Upcoming Events</a>
+                    <a href="page4.html">Plan Your Visit</a>
+                </div>
+            </div>
+        </nav>
+        <section class="events-intro">
+            <h1 id="history-title">Town History</h1>
+            <button class="lorekeeper-toggle lorekeeper-title-toggle" type="button" aria-expanded="false" hidden>Town History</button>
+            <div class="title-divider" aria-hidden="true"></div>
+        </section>
+        <section class="history-timeline" aria-label="Widow's Bay history timeline">
+            <article class="history-entry">
+                <figure>
+                    <img src="marriage.jpg" alt="A wedding portrait from Widow's Bay's early history">
+                </figure>
+                <div class="history-copy">
+                    <p>Widow's Bay was founded in 1686 by a group of settlers led by Richard Warren. There were harsh winters, illness, starvation, and even rumors of cannibalism. Warren married his wife, Sarah, in 1702. Warren died the same year, and Sarah left the island soon after.</p>
+                    <p class="lore-text" hidden>It is said that Warren ate hallucinogenic mushrooms on the island then struck a deal with a demon entity. The entity is tied to the island, and its deal was simple. In exchange for livable conditions during harsh winters, there must be one sacrifice per year. Warren was the first sacrifice, killed by his wife for his aggression after making a deal with the entity. The second condition is that people born on the island can never leave. However, anybody can be used as a sacrifice, and anybody can kill them, similar to Warren.</p>
+                </div>
+            </article>
+            <article class="history-entry">
+                <figure>
+                    <img src="scenic3.jpg" alt="A scenic view of Widow's Bay">
+                </figure>
+                <div class="history-copy">
+                    <p>Widow's Bay eventually started experiencing better agriculture, and the citizens start thriving.</p>
+                    <p class="lore-text" hidden>Whenever the bell tower sounds, the number of rings is the number of sacrifices needed to ensure continued good conditions for the island. If the quota is met, the bell will never sound. If the sacrifices halt, conditions will deteriorate until the exchange is met.</p>
+                </div>
+            </article>
+            <article class="history-entry">
+                <figure>
+                    <img src="mayor2.jpg" alt="Mayor Tom Loftis">
+                </figure>
+                <div class="history-copy">
+                    <p>Our current mayor, Tom Loftis, is championing Widow's Bay as the "New Martha's Vineyard."</p>
+                    <p class="lore-text" hidden>Although the folklore can be concerning, we promise that the string of deaths has nothing to do with it.</p>
+                </div>
+            </article>
+        </section>
+        <section class="people-to-know" aria-labelledby="people-to-know-title">
+            <h2 id="people-to-know-title">Notable Residents</h2>
+            <p class="people-flip-note">Flip to meet them!</p>
+            <div class="people-grid">
+                <article class="person-card" tabindex="0">
+                    <div class="person-card-inner">
+                        <div class="person-card-front">
+                            <img class="seashell-art" src="seashell1.png" alt="">
+                        </div>
+                        <div class="person-card-back">
+                            <img class="seashell-person" src="sherrif.jpg" alt="Sheriff Clemmons">
+                            <h3>Bechir Clemmons</h3>
+                            <p>Town Sheriff</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="person-card" tabindex="0">
+                    <div class="person-card-inner">
+                        <div class="person-card-front">
+                            <img class="seashell-art" src="seashell2.png" alt="">
+                        </div>
+                        <div class="person-card-back">
+                            <img class="seashell-person" src="rosemary.jpg" alt="Genealogist Rosemary">
+                            <h3>Rosemary</h3>
+                            <p>Town staff and genealogist</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="person-card person-card-large" tabindex="0">
+                    <div class="person-card-inner">
+                        <div class="person-card-front">
+                            <img class="seashell-art" src="seashell3.png" alt="">
+                        </div>
+                        <div class="person-card-back">
+                            <img class="seashell-person" src="wyck.jpg" alt="Harbormaster Wyck">
+                            <h3>Wyck Crawford</h3>
+                            <p>Harborman and <button class="lorekeeper-toggle" type="button" aria-expanded="false">lorekeeper</button></p>
+                        </div>
+                    </div>
+                </article>
+                <article class="person-card person-card-large" tabindex="0">
+                    <div class="person-card-inner">
+                        <div class="person-card-front">
+                            <img class="seashell-art" src="seashell4.png" alt="">
+                        </div>
+                        <div class="person-card-back">
+                            <img class="seashell-person" src="dale-patricia.jpg" alt="Town Staff, Patricia and Dale">
+                            <h3>Patricia Moyer and Dale</h3>
+                            <p>Town hall staff</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <script>
+        const loreToggles = document.querySelectorAll(".lorekeeper-toggle");
+        const loreToggle = document.querySelector(".lorekeeper-toggle");
+        const loreTitleToggle = document.querySelector(".lorekeeper-title-toggle");
+        const historyTitle = document.getElementById("history-title");
+        const residents = document.querySelector(".people-to-know");
+        const page = document.querySelector(".events-page");
+        const historyText = document.querySelectorAll(".history-copy > p:not(.lore-text)");
+        const loreText = document.querySelectorAll(".lore-text");
+        const historyImages = document.querySelectorAll(".history-entry figure");
+
+        loreToggles.forEach((toggle) => toggle.addEventListener("click", () => {
+            const loreOpen = loreToggle.getAttribute("aria-expanded") === "true";
+            loreToggles.forEach((control) => control.setAttribute("aria-expanded", String(!loreOpen)));
+            page.classList.toggle("lore-mode", !loreOpen);
+            historyTitle.textContent = loreOpen ? "Town History" : "Widow's Bay Folklore";
+            loreTitleToggle.hidden = loreOpen ? true : false;
+            residents.hidden = !loreOpen;
+            historyText.forEach((text) => text.hidden = !loreOpen);
+            loreText.forEach((text) => text.hidden = loreOpen);
+            historyImages.forEach((image) => image.hidden = !loreOpen);
+        }));
+    </script>
+</body>
+</html>

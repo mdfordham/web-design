@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Your Visit | Widow's Bay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="visit-confirmation-page">
+    <main class="visit-confirmation" aria-live="polite">
+        <input class="visit-choice" type="radio" name="plan-choice" id="plan-yes">
+        <input class="visit-choice" type="radio" name="plan-choice" id="plan-no">
+        <section class="visit-question plan-question" id="plan-question" aria-labelledby="plan-question-title">
+            <h1 id="plan-question-title">Are you sure you want to plan your visit?</h1>
+            <div class="visit-options">
+                <label for="plan-yes">Yes</label>
+                <label for="plan-no">No</label>
+            </div>
+        </section>
+
+        <section class="visit-question home-question" id="home-question" aria-labelledby="home-question-title">
+            <h1 id="home-question-title">Do you want to come back home?</h1>
+            <div class="visit-options">
+                <a href="page3.html">Yes</a>
+                <a href="visit-departure.html">No</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

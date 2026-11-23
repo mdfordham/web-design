@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bell | Widow's Bay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="community-message-page">
+    <main class="community-message">
+        <h1>At 3:17 a.m., the bell rang from Widow's Bay's abandoned church tower.</h1>
+        <button class="community-message-close" type="button" aria-label="Reveal the warning" aria-expanded="false" disabled>
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" focusable="false">
+                <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4" />
+            </svg>
+        </button>
+        <p class="community-message-followup" aria-live="polite" hidden>
+            <span class="community-message-followup-label">Maintenance log / 3:17 a.m.</span>
+            <span class="community-message-followup-copy">The bell has been silent for twenty years. Access to the tower is non-existent. Regardless, various residents claim they heard the bell toll.</span>
+            
+        </p>
+    </main>
+    <script>
+        const messageButton = document.querySelector(".community-message-close");
+        const followupMessage = document.querySelector(".community-message-followup");
+
+        const litButtonTimer = window.setTimeout(() => {
+            messageButton.classList.add("is-lit");
+            messageButton.disabled = false;
+        }, 1700);
+
+        messageButton.addEventListener("click", () => {
+            window.clearTimeout(litButtonTimer);
+            followupMessage.hidden = false;
+            messageButton.setAttribute("aria-expanded", "true");
+            messageButton.disabled = true;
+            window.setTimeout(() => {
+                window.location.replace("page3.html");
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
